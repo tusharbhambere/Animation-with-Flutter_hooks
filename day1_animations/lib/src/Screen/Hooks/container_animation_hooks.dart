@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-class HooksPage extends HookWidget {
-  const HooksPage({Key? key}) : super(key: key);
+class ContainerAniHooks extends HookWidget {
+  const ContainerAniHooks({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,9 @@
-import 'package:day1_animations/src/Screen/HomePage/home_page.dart';
-import 'package:day1_animations/src/Screen/Hooks/hooks_page.dart';
+import 'package:day1_animations/src/Screen/HomePage/container_animation.dart';
+import 'package:day1_animations/src/Screen/HomePage/opacity_animation.dart';
+import 'package:day1_animations/src/Screen/Hooks/container_animation_hooks.dart';
 import 'package:flutter/material.dart';
+
+import 'Hooks/opacity_animation_hooks.dart';
 
 class BothPage extends StatelessWidget {
   const BothPage({Key? key}) : super(key: key);
@@ -19,26 +22,54 @@ class BothPage extends StatelessWidget {
               height: 10,
             ),
             ListTile(
-              tileColor: Colors.grey[400],
+              trailing: const Icon(Icons.forward),
+              tileColor: Colors.grey[200],
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const HomePage(),
+                  builder: (context) => const ContainerAnimation(),
                 ));
               },
-              title: const Text('Old Way Animation'),
+              title: const Text('Old Way AnimatedContainer'),
             ),
             const SizedBox(
               height: 10,
             ),
             ListTile(
-              tileColor: Colors.grey[400],
+              trailing: const Icon(Icons.forward),
+              tileColor: Colors.grey[200],
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const HooksPage(),
+                  builder: (context) => const ContainerAniHooks(),
                 ));
               },
-              title: const Text('With Hooks Animation'),
-            )
+              title: const Text('AnimatedContainer With Hooks Animation'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ListTile(
+              trailing: const Icon(Icons.forward),
+              tileColor: Colors.grey[200],
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const OpacityAnimation(),
+                ));
+              },
+              title: const Text('Old Way Animated Opacity'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            ListTile(
+              trailing: const Icon(Icons.forward),
+              tileColor: Colors.grey[200],
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const AnimatedOpacityHooks(),
+                ));
+              },
+              title: const Text('Animated Opacity With Hooks Animation'),
+            ),
           ],
         ),
       ),

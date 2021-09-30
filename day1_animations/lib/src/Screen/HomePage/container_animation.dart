@@ -2,14 +2,14 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class ContainerAnimation extends StatefulWidget {
+  const ContainerAnimation({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _ContainerAnimationState createState() => _ContainerAnimationState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _ContainerAnimationState extends State<ContainerAnimation> {
   double _width = 100;
   double _height = 100;
   BorderRadius borderRadius = BorderRadius.circular(20);

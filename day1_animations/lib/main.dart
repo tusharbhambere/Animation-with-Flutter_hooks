@@ -1,4 +1,3 @@
-import 'package:day1_animations/src/Screen/HomePage/home_page.dart';
 import 'package:day1_animations/src/Screen/both.dart';
 import 'package:flutter/material.dart';
 
