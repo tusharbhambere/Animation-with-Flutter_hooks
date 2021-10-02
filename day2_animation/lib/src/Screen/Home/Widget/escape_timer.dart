@@ -9,7 +9,7 @@ class EscapeTimer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double _width = 24;
+    const double _width = 12;
     //?minite
     final minute = escaped.inMinutes % 60;
     final minuteString = minute.toString().padLeft(2, '0');
@@ -19,45 +19,43 @@ class EscapeTimer extends StatelessWidget {
     //?Milisecond
     final miliSeconds = (escaped.inMilliseconds / 10) % 100;
     final miliSecondToString = miliSeconds.toStringAsFixed(0).padLeft(2, '0');
-    return SizedBox.expand(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TimeDigit(
-            time: minuteString.substring(0, 1),
-            width: _width,
-          ),
-          TimeDigit(
-            time: minuteString.substring(1, 2),
-            width: _width,
-          ),
-          const TimeDigit(
-            time: ':',
-            width: 6,
-          ),
-          TimeDigit(
-            time: secondString.substring(0, 1),
-            width: _width,
-          ),
-          TimeDigit(
-            time: secondString.substring(1, 2),
-            width: _width,
-          ),
-          const TimeDigit(
-            time: ':',
-            width: 6,
-          ),
-          TimeDigit(
-            time: miliSecondToString.substring(0, 1),
-            width: _width,
-          ),
-          TimeDigit(
-            time: miliSecondToString.substring(1, 2),
-            width: _width,
-          ),
-        ],
-      ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        TimeDigit(
+          time: minuteString.substring(0, 1),
+          width: _width,
+        ),
+        TimeDigit(
+          time: minuteString.substring(1, 2),
+          width: _width,
+        ),
+        const TimeDigit(
+          time: ':',
+          width: 6,
+        ),
+        TimeDigit(
+          time: secondString.substring(0, 1),
+          width: _width,
+        ),
+        TimeDigit(
+          time: secondString.substring(1, 2),
+          width: _width,
+        ),
+        const TimeDigit(
+          time: ':',
+          width: 6,
+        ),
+        TimeDigit(
+          time: miliSecondToString.substring(0, 1),
+          width: _width,
+        ),
+        TimeDigit(
+          time: miliSecondToString.substring(1, 2),
+          width: _width,
+        ),
+      ],
     );
   }
 }
@@ -74,7 +72,7 @@ class TimeDigit extends StatelessWidget {
       width: width,
       child: Text(
         time,
-        style: const TextStyle(color: Colors.white, fontSize: 30),
+        style: const TextStyle(color: Colors.white, fontSize: 20),
       ),
     );
   }
